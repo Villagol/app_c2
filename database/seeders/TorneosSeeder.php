@@ -12,6 +12,6 @@ class TorneosSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        
     }
 }

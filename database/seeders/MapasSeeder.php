@@ -14,8 +14,15 @@ class MapasSeeder extends Seeder
     public function run(): void
     {
         DB::table("mapas")->insert(
+            [
+            ['nombre'=> 'Ascent'],
+            ['nombre'=> 'Split'],
+            ['nombre'=> 'Sunset'],
+            ['nombre'=> 'Bind'],
+            ['nombre'=> 'Icebox'],
+            ['nombre'=> 'Lotus'],
             ['nombre'=> 'Breeze'],
-                        
+            ]           
             
         );  
     }

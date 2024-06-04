@@ -13,8 +13,11 @@ class RegionesSeeder extends Seeder
     public function run(): void
     {
         DB::table("regiones")->insert(
+            [
+            ['nombre'=>'Americas'],
+            ['nombre'=>'EMEA'],
             ['nombre'=>'China'],
-                        
+             ]           
             
         );
     }
