@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Mapas;
+use App\Models\EncuentroEquipo;
 use Illuminate\Http\Request;
 
-class MapasController extends Controller
+class EncuentroEquipossController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class MapasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Mapas $mapas)
+    public function show(EncuentroEquipo $encuentroEquipo)
     {
         //
     }
@@ -42,7 +42,7 @@ class MapasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Mapas $mapas)
+    public function edit(EncuentroEquipo $encuentroEquipo)
     {
         //
     }
@@ -50,7 +50,7 @@ class MapasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Mapas $mapas)
+    public function update(Request $request, EncuentroEquipo $encuentroEquipo)
     {
         //
     }
@@ -58,7 +58,7 @@ class MapasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Mapas $mapas)
+    public function destroy(EncuentroEquipo $encuentroEquipo)
     {
         //
     }

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\EncuentroEquipos;
+use App\Models\Encuentro;
 use Illuminate\Http\Request;
 
-class EncuentroEquiposController extends Controller
+class EncuentrossController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class EncuentroEquiposController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(EncuentroEquipos $encuentroEquipos)
+    public function show(Encuentro $encuentro)
     {
         //
     }
@@ -42,7 +42,7 @@ class EncuentroEquiposController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(EncuentroEquipos $encuentroEquipos)
+    public function edit(Encuentro $encuentro)
     {
         //
     }
@@ -50,7 +50,7 @@ class EncuentroEquiposController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, EncuentroEquipos $encuentroEquipos)
+    public function update(Request $request, Encuentro $encuentro)
     {
         //
     }
@@ -58,7 +58,7 @@ class EncuentroEquiposController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(EncuentroEquipos $encuentroEquipos)
+    public function destroy(Encuentro $encuentro)
     {
         //
     }

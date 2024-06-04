@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Encuentros;
+use App\Models\Region;
 use Illuminate\Http\Request;
 
-class EncuentrosController extends Controller
+class RegionessController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class EncuentrosController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Encuentros $encuentros)
+    public function show(Region $region)
     {
         //
     }
@@ -42,7 +42,7 @@ class EncuentrosController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Encuentros $encuentros)
+    public function edit(Region $region)
     {
         //
     }
@@ -50,7 +50,7 @@ class EncuentrosController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Encuentros $encuentros)
+    public function update(Request $request, Region $region)
     {
         //
     }
@@ -58,7 +58,7 @@ class EncuentrosController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Encuentros $encuentros)
+    public function destroy(Region $region)
     {
         //
     }

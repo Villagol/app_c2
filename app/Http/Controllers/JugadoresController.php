@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Jugadores;
+use App\Models\Jugador;
 use Illuminate\Http\Request;
 
 class JugadoresController extends Controller
@@ -34,7 +34,7 @@ class JugadoresController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Jugadores $jugadores)
+    public function show(Jugador $jugador)
     {
         //
     }
@@ -42,7 +42,7 @@ class JugadoresController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Jugadores $jugadores)
+    public function edit(Jugador $jugador)
     {
         //
     }
@@ -50,7 +50,7 @@ class JugadoresController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Jugadores $jugadores)
+    public function update(Request $request, Jugador $jugador)
     {
         //
     }
@@ -58,7 +58,7 @@ class JugadoresController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Jugadores $jugadores)
+    public function destroy(Jugador $jugador)
     {
         //
     }

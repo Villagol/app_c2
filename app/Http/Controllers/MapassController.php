@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Regiones;
+use App\Models\Mapa;
 use Illuminate\Http\Request;
 
-class RegionesController extends Controller
+class MapassController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class RegionesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Regiones $regiones)
+    public function show(Mapa $mapa)
     {
         //
     }
@@ -42,7 +42,7 @@ class RegionesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Regiones $regiones)
+    public function edit(Mapa $mapa)
     {
         //
     }
@@ -50,7 +50,7 @@ class RegionesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Regiones $regiones)
+    public function update(Request $request, Mapa $mapa)
     {
         //
     }
@@ -58,7 +58,7 @@ class RegionesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Regiones $regiones)
+    public function destroy(Mapa $mapa)
     {
         //
     }

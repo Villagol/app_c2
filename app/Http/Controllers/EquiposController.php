@@ -12,7 +12,8 @@ class EquiposController extends Controller
      */
     public function index()
     {
-        //
+        $equipos = Equipo::orderBy('nombre')->get();
+        return $equipos;
     }
 
     /**
@@ -36,7 +37,7 @@ class EquiposController extends Controller
      */
     public function show(Equipo $equipo)
     {
-        //
+        return $equipo;
     }
 
     /**
