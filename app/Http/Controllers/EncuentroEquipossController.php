@@ -12,7 +12,9 @@ class EncuentroEquipossController extends Controller
      */
     public function index()
     {
-        //
+        $encuentroEquipos = EncuentroEquipo::with('encuentro', 'equipoLocal', 'equipoVisitante')->get();
+
+        return response()->json($encuentroEquipos);
     }
 
     /**

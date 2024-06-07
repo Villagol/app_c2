@@ -12,8 +12,10 @@ class JugadoresController extends Controller
      */
     public function index()
     {
-        //
+        return Jugador::all()->load("equipo")->makeHidden("equipo_id");
     }
+    
+
 
     /**
      * Show the form for creating a new resource.
@@ -34,10 +36,19 @@ class JugadoresController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Jugador $jugador)
-    {
-        //
+    public function show($id)
+{
+
+    $jugador = Jugador::find($id);
+
+    if ($jugador) {
+        return response()->json($jugador);
+    } else {
+        return response()->json(['error' => 'Jugador no encontrado'], 404);
     }
+}
+
+
 
     /**
      * Show the form for editing the specified resource.

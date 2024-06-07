@@ -12,7 +12,7 @@ class EncuentrossController extends Controller
      */
     public function index()
     {
-        //
+        return Encuentro::all();
     }
 
     /**

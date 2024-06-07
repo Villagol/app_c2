@@ -12,7 +12,9 @@ class RegionessController extends Controller
      */
     public function index()
     {
-        //
+        $regiones = Region::orderBy('nombre')->get();
+        
+        return $regiones;
     }
 
     /**
@@ -36,7 +38,10 @@ class RegionessController extends Controller
      */
     public function show(Region $region)
     {
-        //
+        
+        $equipos = $region->equipos()->orderBy('nombre')->get();
+        
+        return $equipos;
     }
 
     /**
