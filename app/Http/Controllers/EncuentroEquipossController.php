@@ -11,11 +11,22 @@ class EncuentroEquipossController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $encuentroEquipos = EncuentroEquipo::with('encuentro', 'equipoLocal', 'equipoVisitante')->get();
+{
+    $encuentroEquipos = EncuentroEquipo::with('encuentro', 'equipoLocal', 'equipoVisitante')->get();
 
-        return response()->json($encuentroEquipos);
-    }
+    $formattedEncuentros = $encuentroEquipos->map(function ($encuentro) {
+        return [
+            'nombre_equipo_local' => $encuentro->equipoLocal->nombre,
+            'nombre_equipo_visitante' => $encuentro->equipoVisitante->nombre,
+            'resultado' => $encuentro->resultado,
+            'mapa' => $encuentro->encuentro->mapa->nombre,
+            'hora' => date('H:i', strtotime($encuentro->encuentro->hora)),
+            'fecha' => date('d/m/Y', strtotime($encuentro->encuentro->fecha)),
+        ];
+    });
+
+    return response()->json($formattedEncuentros);
+}
 
     /**
      * Show the form for creating a new resource.

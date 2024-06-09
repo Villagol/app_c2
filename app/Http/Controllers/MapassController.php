@@ -12,8 +12,12 @@ class MapassController extends Controller
      */
     public function index()
     {
-        //
+        $mapas = Mapa::all()->pluck('nombre');
+    
+        return response()->json($mapas);
     }
+    
+
 
     /**
      * Show the form for creating a new resource.

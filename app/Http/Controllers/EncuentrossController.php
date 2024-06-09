@@ -11,9 +11,14 @@ class EncuentrossController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        return Encuentro::all();
-    }
+{
+    $encuentros = Encuentro::all()->map(function ($encuentro) {
+        $encuentro->fecha = date('d/m/Y', strtotime($encuentro->fecha));
+        return $encuentro;
+    });
+
+    return $encuentros;
+}
 
     /**
      * Show the form for creating a new resource.
