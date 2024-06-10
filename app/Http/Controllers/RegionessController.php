@@ -11,11 +11,13 @@ class RegionessController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $regiones = Region::orderBy('nombre')->get();
-        
-        return $regiones;
-    }
+{
+    $regiones = Region::orderBy('id')->get();
+    
+    \Log::info($regiones); 
+    
+    return $regiones;
+}
 
     /**
      * Show the form for creating a new resource.
@@ -36,12 +38,10 @@ class RegionessController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Region $region)
+    public function show($id)
     {
-        
-        $equipos = $region->equipos()->orderBy('nombre')->get();
-        
-        return $equipos;
+        $region = Region::findOrFail($id);
+        return response()->json($region);
     }
 
     /**
