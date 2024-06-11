@@ -14,7 +14,6 @@ class RegionessController extends Controller
 {
     $regiones = Region::orderBy('id')->get();
     
-    \Log::info($regiones); 
     
     return $regiones;
 }
