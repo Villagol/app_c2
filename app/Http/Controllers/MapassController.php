@@ -38,10 +38,17 @@ class MapassController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Mapa $mapa)
-    {
-        //
+    public function show($id)
+{
+    $mapa = Mapa::find($id);
+
+    if ($mapa) {
+        return response()->json($mapa);
+    } else {
+        return response()->json(['error' => 'Mapa no encontrado'], 404);
     }
+}
+
 
     /**
      * Show the form for editing the specified resource.
