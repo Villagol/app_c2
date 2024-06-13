@@ -73,9 +73,32 @@ public function store(Request $request)
      * Update the specified resource in storage.
      */
     public function update(Request $request, Jugador $jugador)
-    {
-        //
+{
+    try {
+        $request->validate([
+            'nombre' => 'required|string',
+            'apellido' => 'required|string',
+            'nickname' => 'required|string',
+            'agente_1' => 'nullable|string',
+            'agente_2' => 'nullable|string',
+            'agente_3' => 'nullable|string',
+        ]);
+
+        $jugador->update([
+            'nombre' => $request->nombre,
+            'apellido' => $request->apellido,
+            'nickname' => $request->nickname,
+            'agente_1' => $request->agente_1,
+            'agente_2' => $request->agente_2,
+            'agente_3' => $request->agente_3,
+        ]);
+
+        return response()->json(['message' => 'Jugador actualizado correctamente'], 200);
+    } catch (\Exception $e) {
+        return response()->json(['message' => 'Error al actualizar el jugador: ' . $e->getMessage()], 500);
     }
+}
+
 
     /**
      * Remove the specified resource from storage.

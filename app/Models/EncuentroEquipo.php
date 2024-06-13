@@ -11,6 +11,9 @@ class EncuentroEquipo extends Model
     
     protected $table = "encuentro_equipos";
     public $timestamps = false;
+    protected $fillable = [
+        'resultado',
+    ];
 
     public function encuentro()
     {

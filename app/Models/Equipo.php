@@ -14,6 +14,7 @@ class Equipo extends Model
     
     protected $table = "equipos";
     public $timestamps = false;
+    protected $fillable = ['nombre','entrenador','region_id'];
 
     public function jugadores(): HasMany
     {

@@ -13,6 +13,10 @@ class Encuentro extends Model
     
     protected $table = "encuentros";
     public $timestamps = false;
+    protected $fillable = [
+        'fecha',
+        'hora',
+    ];
 
     public function mapa(): BelongsTo
     {

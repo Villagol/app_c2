@@ -68,25 +68,25 @@ class EquiposController extends Controller
  * Update the specified resource in storage.
  */
 public function update(Request $request, Equipo $equipo)
-{
-    try {
-        $request->validate([
-            'nombre' => 'required|string',
-            'entrenador' => 'required|string',
-            'region_id' => 'required|integer',
-        ]);
+    {
+        try {
+            $request->validate([
+                'nombre' => 'required|string',
+                'entrenador' => 'required|string',
+                'region_id' => 'required|integer',
+            ]);
 
-        $equipo->update([
-            'nombre' => $request->nombre,
-            'entrenador' => $request->entrenador,
-            'region_id' => $request->region_id,
-        ]);
+            $equipo->update([
+                'nombre' => $request->nombre,
+                'entrenador' => $request->entrenador,
+                'region_id' => $request->region_id,
+            ]);
 
-        return response()->json(['message' => 'Equipo actualizado correctamente'], 200);
-    } catch (\Exception $e) {
-        return response()->json(['message' => 'Error al actualizar el equipo: ' . $e->getMessage()], 500);
+            return response()->json(['message' => 'Equipo actualizado correctamente'], 200);
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Error al actualizar el equipo: ' . $e->getMessage()], 500);
+        }
     }
-}
 
 
     /**
