@@ -28,3 +28,4 @@ Route::put('/encuentro_equipos/{encuentro_equipo}', [EncuentroEquipossController
 Route::put('/jugadores/{jugador}', [JugadoresController::class, 'update']);
 Route::patch('/encuentro_equipos/{encuentro_equipo}', [EncuentroEquipossController::class, 'update']);
 Route::delete('/jugadores',[JugadoresController::class,'destroy']);
+Route::put('/encuentro_equipos/{encuentro_equipo}/resultado', [EncuentroEquipossController::class, 'updateResultado']);

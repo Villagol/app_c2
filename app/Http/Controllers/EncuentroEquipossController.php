@@ -156,5 +156,21 @@ class EncuentroEquipossController extends Controller
         ], 500);
     }
 }
+public function updateResultado(Request $request, EncuentroEquipo $encuentroEquipo)
+{
+    try {
+        $request->validate([
+            'resultado' => 'required|string',
+        ]);
+
+        $encuentroEquipo->update([
+            'resultado' => $request->resultado,
+        ]);
+
+        return response()->json(['message' => 'Resultado del encuentro actualizado correctamente'], 200);
+    } catch (\Exception $e) {
+        return response()->json(['error' => 'Error al actualizar el resultado del encuentro: ' . $e->getMessage()], 500);
+    }
+}
 
 }
